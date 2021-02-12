@@ -15,7 +15,7 @@ var MongoStore = require('connect-mongo')(session);
 var app = express();
 
 app.locals.pretty = true;
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 178.128.172.67);
 app.set('views', __dirname + '/app/server/views');
 app.set('view engine', 'pug');
 app.use(cookieParser());
