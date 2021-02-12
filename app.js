@@ -15,7 +15,7 @@ var MongoStore = require('connect-mongo')(session);
 var app = express();
 
 app.locals.pretty = true;
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || @);
 app.set('views', __dirname + '/app/server/views');
 app.set('view engine', 'pug');
 app.use(cookieParser());
@@ -48,7 +48,7 @@ app.use(session({
 
 require('./app/server/routes')(app);
 
-http.createServer(app).listen(app.get('178.128.172.67'), function(){
-	console.log('Express server listening on port ' + app.get('178.128.172.67'));
+http.createServer(app).listen(app.get('port'), function(){
+	console.log('Express server listening on port ' + app.get('port'));
 });
 
